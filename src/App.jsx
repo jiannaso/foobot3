@@ -67,20 +67,12 @@ function App() {
   return (
 
     <>
-      {gameFull ? ( // If the game is full, display a message. think have to pass variable into cubes component
-      <Canvas>
-        <div className="game-full-message">
-          <p>Two players are already in the game. Please try again later.</p>
-        </div>
-      </Canvas>
-      ) : (
       <Canvas camera={{ fov: 45, position: [-10, 10, 10] }}>
         <color attach="background" args={["#white"]} />
         <OrbitControls makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 2.15} />
         <Background />
         <Cubes />
       </Canvas>
-   )}
    </>
  );
 }
